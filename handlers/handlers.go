@@ -7,9 +7,9 @@ import (
 	"strings"
 
 	tgbotapi "github.com/go-telegram-bot-api/telegram-bot-api/v5"
-	"github.com/yourusername/reminder-bot/bot"
-	"github.com/yourusername/reminder-bot/models"
-	"github.com/yourusername/reminder-bot/utils"
+	"github.com/awhatson15/reminder-bot/bot"
+	"github.com/awhatson15/reminder-bot/models"
+	"github.com/awhatson15/reminder-bot/utils"
 )
 
 // HandleMessage обрабатывает текстовые сообщения

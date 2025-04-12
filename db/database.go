@@ -9,7 +9,7 @@ import (
 	"time"
 
 	_ "github.com/mattn/go-sqlite3"
-	"github.com/yourusername/reminder-bot/models"
+	"github.com/awhatson15/reminder-bot/models"
 )
 
 // DB представляет экземпляр базы данных
