@@ -9,6 +9,7 @@ import (
 	"github.com/awhatson15/reminder-bot/db"
 	"github.com/awhatson15/reminder-bot/models"
 	"github.com/awhatson15/reminder-bot/utils"
+	"github.com/awhatson15/reminder-bot/handlers"
 )
 
 // Bot представляет Telegram бота

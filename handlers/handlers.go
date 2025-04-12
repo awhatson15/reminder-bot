@@ -10,7 +10,6 @@ import (
 	"github.com/awhatson15/reminder-bot/bot"
 	"github.com/awhatson15/reminder-bot/models"
 	"github.com/awhatson15/reminder-bot/utils"
-	"github.com/awhatson15/reminder-bot/handlers"
 )
 
 // HandleMessage обрабатывает текстовые сообщения
