@@ -233,7 +233,7 @@ func (db *DB) DeleteEvent(eventID int64) error {
 // GetUpcomingEvents получает предстоящие события для отправки уведомлений
 func (db *DB) GetUpcomingEvents() ([]*models.Event, error) {
 	// Текущая дата
-	currentYear := time.Now().Year()
+	//currentYear := time.Now().Year()
 	currentMonth := time.Now().Month()
 	currentDay := time.Now().Day()
 	
@@ -266,7 +266,7 @@ func (db *DB) GetUpcomingEvents() ([]*models.Event, error) {
 		err := rows.Scan(
 			&event.ID, &event.UserID, &event.Title, &event.Type, 
 			&event.EventDate, &event.NotifyDays, &event.Description,
-			&telegramID, ¬ificationTime,
+			&telegramID, notificationTime,
 		)
 		if err != nil {
 			return nil, fmt.Errorf("ошибка при сканировании данных предстоящего события: %w", err)
