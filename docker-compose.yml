@@ -1,0 +1,19 @@
+services:
+  reminder-bot:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: reminder-bot
+    restart: always
+    environment:
+      - BOT_TOKEN=7556988919:AAF-3vAvBy8OxyL-mcVWzOWcABs89E9O_qU
+      - DATABASE_PATH=/app/data/reminder.db
+      - DEFAULT_NOTIFY_TIME=09:00
+    volumes:
+      - ./data:/app/data
+    networks:
+      - bot-network
+
+networks:
+  bot-network:
+    driver: bridge
