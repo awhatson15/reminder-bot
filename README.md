@@ -22,7 +22,7 @@ ReminderBot - это многопользовательский Telegram бот,
 ### 1. Клонирование репозитория
 
 ```bash
-git clone https://github.com/yourusername/reminder-bot.git
+git clone https://github.com/awhatson15/reminder-bot.git
 cd reminder-bot
 ```
 

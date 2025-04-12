@@ -1,4 +1,4 @@
-module github.com/yourusername/reminder-bot
+module github.com/awhatson15/reminder-bot
 
 go 1.21
 

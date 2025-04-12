@@ -6,9 +6,9 @@ import (
 	"time"
 
 	"github.com/robfig/cron/v3"
-	"github.com/yourusername/reminder-bot/bot"
-	"github.com/yourusername/reminder-bot/config"
-	"github.com/yourusername/reminder-bot/db"
+	"github.com/awhatson15/reminder-bot/bot"
+	"github.com/awhatson15/reminder-bot/config"
+	"github.com/awhatson15/reminder-bot/db"
 )
 
 func main() {
