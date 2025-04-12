@@ -9,6 +9,7 @@ import (
 	"github.com/awhatson15/reminder-bot/db"
 	"github.com/awhatson15/reminder-bot/models"
 	"github.com/awhatson15/reminder-bot/utils"
+	"github.com/awhatson15/reminder-bot/handlers"
 )
 
 // Bot представляет Telegram бота
@@ -37,12 +38,12 @@ func NewBot(token string, database *db.DB) (*Bot, error) {
 
 // handleMessage обрабатывает входящие сообщения
 func (b *Bot) handleMessage(message *tgbotapi.Message) error {
-    return handlers.HandleMessage(b.Bot, b.DB, message)
+    return handlers.HandleMessage(b.Client, b.DB, message)
 }
 
 // handleCallbackQuery обрабатывает входящие callback запросы
 func (b *Bot) handleCallbackQuery(query *tgbotapi.CallbackQuery) error {
-    return handlers.HandleCallbackQuery(b.Bot, b.DB, query)
+    return handlers.HandleCallbackQuery(b.Client, b.DB, query)
 }
 
 // Start запускает бота
