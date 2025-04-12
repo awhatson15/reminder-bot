@@ -6,8 +6,8 @@ import (
 	"sync"
 
 	tgbotapi "github.com/go-telegram-bot-api/telegram-bot-api/v5"
-	"github.com/yourusername/reminder-bot/db"
-	"github.com/yourusername/reminder-bot/models"
+	"github.com/awhatson15/reminder-bot/db"
+	"github.com/awhatson15/reminder-bot/models"
 )
 
 // Bot представляет Telegram бота
