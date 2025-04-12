@@ -11,6 +11,9 @@ RUN go mod download
 # Копируем исходный код
 COPY . .
 
+# Install GCC
+RUN apt-get update && apt-get install -y gcc
+
 # Собираем приложение
 RUN CGO_ENABLED=1 GOOS=linux go build -a -installsuffix cgo -o remindersbot .
 
