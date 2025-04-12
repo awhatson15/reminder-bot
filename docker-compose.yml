@@ -6,7 +6,7 @@ services:
     container_name: reminder-bot
     restart: always
     environment:
-      - BOT_TOKEN=7556988919:AAF-3vAvBy8OxyL-mcVWzOWcABs89E9O_qU
+      - BOT_TOKEN=insert-token
       - DATABASE_PATH=/app/data/reminder.db
       - DEFAULT_NOTIFY_TIME=09:00
     volumes:
