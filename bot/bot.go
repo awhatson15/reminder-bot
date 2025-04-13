@@ -206,7 +206,7 @@ func (b *Bot) CheckAndSendNotifications() error {
 }
 
 // HandleMessage обрабатывает текстовые сообщения
-func (b *bot.Bot) handleMessage(message *tgbotapi.Message) {
+func (b *bot) handleMessage(message *tgbotapi.Message) {
 	if message.IsCommand() {
 		b.handleCommand(message)
 		return
@@ -439,7 +439,7 @@ func (b *bot.Bot) handleMessage(message *tgbotapi.Message) {
 }
 
 // HandleCallbackQuery обрабатывает нажатия на inline-кнопки
-func (b *bot.Bot) handleCallbackQuery(callback *tgbotapi.CallbackQuery) {
+func (b *bot) handleCallbackQuery(callback *tgbotapi.CallbackQuery) {
 	userID := callback.From.ID
 	chatID := callback.Message.Chat.ID
 	data := callback.Data
@@ -720,7 +720,7 @@ func (b *bot.Bot) handleCallbackQuery(callback *tgbotapi.CallbackQuery) {
 }
 
 // HandleCommand обрабатывает команды бота
-func (b *bot.Bot) handleCommand(message *tgbotapi.Message) {
+func (b *bot) handleCommand(message *tgbotapi.Message) {
 	userID := message.From.ID
 	chatID := message.Chat.ID
 
@@ -798,7 +798,7 @@ func (b *bot.Bot) handleCommand(message *tgbotapi.Message) {
 }
 
 // sendEventsList отправляет список событий пользователя
-func (b *bot.Bot) sendEventsList(chatID, userID int64) {
+func (b *bot) sendEventsList(chatID, userID int64) {
 	user, err := b.DB.GetUserByTelegramID(userID)
 	if err != nil {
 		log.Printf("Ошибка при получении пользователя: %v", err)
@@ -868,7 +868,7 @@ func (b *bot.Bot) sendEventsList(chatID, userID int64) {
 }
 
 // showSettings показывает меню настроек
-func (b *bot.Bot) showSettings(chatID, userID int64) {
+func (b *bot) showSettings(chatID, userID int64) {
 	user, err := b.DB.GetUserByTelegramID(userID)
 	if err != nil {
 		log.Printf("Ошибка при получении пользователя: %v", err)
