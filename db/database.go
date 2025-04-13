@@ -25,7 +25,7 @@ func NewDB(dbPath string) (*DB, error) {
 		return nil, fmt.Errorf("не удалось создать директорию для БД: %w", err)
 	}
 
-	db, err := sql.Open("sqlite3", dbPath)
+	db, err := sql.Open("sqlite", dbPath)
 	if err != nil {
 		return nil, fmt.Errorf("не удалось открыть базу данных: %w", err)
 	}
