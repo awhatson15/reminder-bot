@@ -9,6 +9,7 @@ import (
 	"github.com/awhatson15/reminder-bot/bot"
 	"github.com/awhatson15/reminder-bot/config"
 	"github.com/awhatson15/reminder-bot/db"
+	"github.com/awhatson15/reminder-bot/utils"
 )
 
 func main() {
