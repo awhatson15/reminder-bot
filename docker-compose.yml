@@ -9,6 +9,7 @@ services:
       - BOT_TOKEN=insert-token
       - DATABASE_PATH=/app/data/reminder.db
       - DEFAULT_NOTIFY_TIME=09:00
+      - TZ=Europe/Moscow
     volumes:
       - ./data:/app/data
     networks:
