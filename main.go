@@ -16,6 +16,17 @@ func main() {
 	// Загружаем конфигурацию
 	cfg := config.LoadConfig()
 
+	// Выводим значение токена для отладки
+	if cfg.BotToken == "" {
+		log.Println("ВНИМАНИЕ: Токен бота не установлен (пустая строка)")
+	} else {
+		log.Printf("Токен бота установлен, длина: %d символов", len(cfg.BotToken))
+		// Для безопасности выводим только первые несколько символов
+		if len(cfg.BotToken) > 5 {
+			log.Printf("Первые 5 символов токена: %s...", cfg.BotToken[:5])
+		}
+	}
+
 	// Настраиваем логирование
 	log.SetOutput(os.Stdout)
 	log.SetFlags(log.Ldate | log.Ltime | log.Lshortfile)
