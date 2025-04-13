@@ -106,15 +106,3 @@ func GetCurrentTimeForCron() string {
 	now := time.Now()
 	return fmt.Sprintf("%d %d * * *", now.Minute(), now.Hour())
 }
-
-// Добавляем методы handleMessage и handleCallbackQuery в структуру Bot
-
-// handleMessage обрабатывает входящие сообщения
-func (b *Bot) handleMessage(message *tgbotapi.Message) error {
-    return handlers.HandleMessage(b.Client, b.DB, message)
-}
-
-// handleCallbackQuery обрабатывает входящие callback запросы
-func (b *Bot) handleCallbackQuery(query *tgbotapi.CallbackQuery) error {
-    return handlers.HandleCallbackQuery(b.Client, b.DB, query)
-}
