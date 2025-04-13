@@ -296,7 +296,8 @@ func (b *Bot) handleMessage(message *tgbotapi.Message) {
 			Description: description,
 		}
 
-		_, err := b.DB.CreateEvent(event)
+		var eventID int64
+		eventID, err := b.DB.CreateEvent(event)
 		if err != nil {
 			log.Printf("Ошибка при создании события: %v", err)
 			msg := tgbotapi.NewMessage(chatID, "❌ Произошла ошибка при сохранении события.")
@@ -304,6 +305,7 @@ func (b *Bot) handleMessage(message *tgbotapi.Message) {
 			b.ResetUserState(userID)
 			return
 		}
+		_ = eventID // Используем переменную, чтобы избежать ошибки "unused variable"
 
 		// Форматируем дату для отображения
 		displayDate := utils.FormatDisplayDate(event.EventDate)
