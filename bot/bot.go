@@ -297,7 +297,7 @@ func (b *Bot) handleMessage(message *tgbotapi.Message) {
 		}
 
 		var eventID int64
-		eventID, err := b.DB.CreateEvent(event)
+		eventID, err = b.DB.CreateEvent(event)
 		if err != nil {
 			log.Printf("Ошибка при создании события: %v", err)
 			msg := tgbotapi.NewMessage(chatID, "❌ Произошла ошибка при сохранении события.")
